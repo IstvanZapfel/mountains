@@ -304,8 +304,8 @@ h6 {
 }
 
 .tel-icon {
-  width: 3%;
-  height: 3%;
+  width: 4%;
+  height: 4%;
   vertical-align: middle;
   margin: 0 7px;
 }
@@ -659,6 +659,8 @@ h6 {
 
 .blog_quote__image {
   margin-bottom: 5px;
+  width: 20px;
+  height: 14.412px;
 }
 
 .blockquote__text {
@@ -960,6 +962,36 @@ h6 {
 
 .contacts-button__btn:hover {
   background-color: #112b68;
+}
+
+.svg-bag-dims {
+  width: 40px;
+  height: 40px;
+}
+
+.svg-camp-dims {
+  width: 40px;
+  height: 40px;
+}
+
+.svg-handset_ring-dims {
+  width: 1000px;
+  height: 1000px;
+}
+
+.svg-hotel-dims {
+  width: 40px;
+  height: 40px;
+}
+
+.svg-quotes-dims {
+  width: 20px;
+  height: 14.412px;
+}
+
+.svg-world-dims {
+  width: 40px;
+  height: 40px;
 }
 
 @media (max-width: 1070px) {
