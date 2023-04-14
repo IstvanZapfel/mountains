@@ -96,6 +96,10 @@ h6 {
 }
 
 /*--------------------*/
+body.lock {
+  overflow: hidden;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -164,24 +168,26 @@ h6 {
   .menu__body {
     position: fixed;
     justify-content: center;
-    width: 100%;
+    width: 50%;
     height: 100%;
     top: 0;
     left: 0;
     overflow: auto;
-    background-color: #6277be;
+    background-color: rgba(174, 191, 158, 0.9529411765);
     z-index: 11;
-    transform: translate3d(0px, -100%, 0px);
+    transform: translate3d(-100%, 0px, 0px);
     transition: all 0.3s ease 0s;
   }
   .menu__body.active {
     transform: translate3d(0px, 0px, 0px);
   }
   .menu__list {
+    display: flex;
     margin-top: 100px;
+    margin-left: 30px;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
   }
 }
 
@@ -203,11 +209,11 @@ h6 {
   .icon-menu span {
     transition: all 0.3s ease 0s;
     position: absolute;
-    top: 10px;
+    top: 11px;
     left: 0;
-    height: 4px;
+    height: 3px;
     width: 100%;
-    background-color: #0a0a0a;
+    background-color: #292929;
   }
   .icon-menu span:first-child {
     top: 0px;
@@ -221,7 +227,7 @@ h6 {
   }
   .icon-menu.active span:first-child {
     transform: rotate(-45deg);
-    top: 11px;
+    top: 12px;
   }
   .icon-menu.active span:last-child {
     transform: rotate(45deg);
@@ -282,7 +288,7 @@ h6 {
   font-family: "Oswald", sans-serif;
   font-size: 70px;
   font-weight: 500;
-  color: #707172;
+  color: #ffffff;
 }
 @media (max-width: 768px) {
   .main__title {
@@ -352,9 +358,9 @@ h6 {
 .travel__btn {
   padding: 10px 25px;
   font-size: 16px;
-  background-color: rgba(115, 137, 94, 0.9529411765);
-  border-bottom: 2px solid #6f1d55;
-  border-radius: 10%;
+  background-color: #9dc159;
+  border-bottom: 3px solid #747472;
+  border-radius: 5%;
 }
 .travel__btn:hover {
   background-color: rgba(89, 121, 59, 0.9529411765);
