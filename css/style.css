@@ -143,13 +143,19 @@ body.lock {
   left: 0.9375rem;
   top: 1.5625rem;
 }
+@media (min-width: 767px) {
+  .header__logo-s {
+    display: none;
+  }
+}
 .header__logo {
+  position: absolute;
   cursor: pointer;
-  display: flex;
-  justify-content: flex-end;
+  right: 10px;
+  top: 18px;
 }
 .header__logo img {
-  width: 80%;
+  width: 90%;
 }
 
 .home-link img {
@@ -169,6 +175,9 @@ body.lock {
   color: #454141;
   cursor: pointer;
   font-weight: 500;
+}
+.menu__link:hover {
+  color: #c2591c;
 }
 @media (max-width: 767px) {
   .menu__body {
@@ -194,6 +203,7 @@ body.lock {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    flex-wrap: nowrap;
   }
 }
 
