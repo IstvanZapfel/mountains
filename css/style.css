@@ -138,27 +138,33 @@ body.lock {
 .header__body {
   margin: 40px;
 }
-.header__menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.header__menu button {
+  position: absolute;
+  left: 0.9375rem;
+  top: 1.5625rem;
 }
 .header__logo {
-  position: absolute;
-  right: 20px;
-  z-index: 5;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+}
+.header__logo img {
+  width: 80%;
+}
+
+.home-link img {
+  width: 45%;
   cursor: pointer;
 }
 
-.menu__body {
-  z-index: 5;
-}
 .menu__list {
   display: flex;
-  gap: 50px;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
 }
 .menu__link {
-  font-size: 20px;
+  font-size: 18px;
   text-transform: uppercase;
   color: #454141;
   cursor: pointer;
@@ -193,45 +199,43 @@ body.lock {
 
 @media (max-width: 767px) {
   .icon-menu {
-    position: absolute;
-    left: 10px;
-    top: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 24px;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
+    display: block;
+    position: relative;
     z-index: 12;
+    width: 1.875rem;
+    height: 1.125rem;
+    background-color: transparent;
+    cursor: pointer;
   }
-  .icon-menu span {
-    transition: all 0.3s ease 0s;
+  .icon-menu__line, .icon-menu::before, .icon-menu::after {
+    content: "";
     position: absolute;
-    top: 11px;
-    left: 0;
-    height: 2px;
+    background-color: #252323;
+    height: 0.125rem;
     width: 100%;
-    background-color: #292929;
+    left: 0;
+    transition: all 0.3s ease 0s;
   }
-  .icon-menu span:first-child {
-    top: 0px;
+  .icon-menu::before {
+    top: 0;
   }
-  .icon-menu span:last-child {
-    top: auto;
-    bottom: 0px;
+  .icon-menu::after {
+    bottom: 0;
   }
-  .icon-menu.active span {
-    transform: scale(0);
+  .icon-menu__line {
+    top: calc(50% - 0.0625rem);
   }
-  .icon-menu.active span:first-child {
+  .icon-menu.active::before {
+    top: calc(50% - 0.0625rem);
     transform: rotate(-45deg);
-    top: 12px;
   }
-  .icon-menu.active span:last-child {
+  .icon-menu.active::after {
+    top: calc(50% - 0.0625rem);
     transform: rotate(45deg);
-    bottom: 10px;
+  }
+  .icon-menu__line.active {
+    left: 50%;
+    width: 0;
   }
 }
 
@@ -1276,6 +1280,11 @@ body.lock {
 }
 .contacts-button__btn:hover {
   background-color: #112b68;
+}
+
+.svg-home-dims {
+  width: 40px;
+  height: 40px;
 }
 
 .svg-bag-dims {
