@@ -1466,7 +1466,13 @@ swiper-container .swiper-notification {
   margin-top: 70px;
   max-width: 800px;
 }
+@media (max-width: 767px) {
+  .routes__slider {
+    margin-top: 50px;
+  }
+}
 .routes__slider-title {
+  margin: 0px 0px 10px 0px;
   color: #fff;
   text-align: center;
   font-size: calc(
@@ -1476,42 +1482,48 @@ swiper-container .swiper-notification {
 .routes__slider-nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0px 0px 15px 0px;
+  justify-content: center;
+  padding: 5px 0px 5px 0px;
 }
-@media (max-width: 540px) {
+@media (max-width: 767px) {
   .routes__slider-nav {
-    flex-direction: column;
-    padding: 0px 0px 10px 0px;
+    justify-content: space-between;
   }
 }
 .routes__slider-prev, .routes__slider-next {
   background: url("../img/arrow-slide.svg") 0 0 no-repeat;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
 }
-.routes__slider-prev {
-  -moz-transform: rotate(-180deg);
-  -ms-transform: rotate(-180deg);
-  -webkit-transform: rotate(-180deg);
-  -o-transform: rotate(-180deg);
-  transform: rotate(-180deg);
-}
-.routes__slider-pagination {
-  display: flex;
-  flex: 0 1 200px;
-  justify-content: center;
-}
-@media (max-width: 540px) {
-  .routes__slider-pagination {
-    flex: 0 1 auto;
-    padding: 10px 0px 10px 0px;
+@media (min-width: 767px) {
+  .routes__slider-prev:hover, .routes__slider-next:hover {
+    background: url("../img/arrow-slide-h.svg") 0 0 no-repeat;
   }
 }
+.routes__slider-prev {
+  transform: rotateY(-180deg);
+}
+.routes__slider-pagination {
+  flex: 0 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 767px) {
+  .routes__slider-pagination {
+    display: none;
+  }
+}
+
 .swiper-pagination-bullet {
-  background-color: #fff;
+  background-color: #ffbc2d;
   width: 10px;
   height: 10px;
+}
+@media (min-width: 767px) {
+  .swiper-pagination-bullet:hover {
+    background-color: #ffffff;
+  }
 }
 
 body.lock {
@@ -1611,12 +1623,12 @@ body {
 }
 @media (max-width: 768px) {
   .title {
-    left: 40px;
+    left: 30px;
   }
 }
 @media (max-width: 400px) {
   .title {
-    left: 20px;
+    left: 5px;
   }
 }
 
@@ -1660,7 +1672,7 @@ body {
   color: #ffbc2d;
   line-height: 130%;
   position: relative;
-  padding: 0px 0px 0px 20px;
+  padding: 0px 0px 0px 0px;
   margin: 0px 0px 20px 0px;
 }
 @media (max-width: 400px) {
