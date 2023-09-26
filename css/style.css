@@ -1014,12 +1014,14 @@ swiper-container .swiper-notification {
   justify-content: center;
 }
 .menu__list li {
+  flex: 1 0 auto;
   margin: 0px 15px 0px 0px;
 }
 .menu__list li:last-child {
   margin: 0px 0px 0px 0px;
 }
 .menu__link {
+  display: block;
   font-size: 18px;
   text-transform: uppercase;
   color: #ffffff;
@@ -1125,7 +1127,8 @@ swiper-container .swiper-notification {
   align-items: center;
 }
 .contacts__title {
-  display: inline-block;
+  flex: 1 0 auto;
+  display: block;
   font-size: 16px;
   text-transform: uppercase;
   font-weight: 300;
@@ -1302,19 +1305,19 @@ swiper-container .swiper-notification {
   transition: transform 0.8s ease 0s;
 }
 .locations__item._active:nth-child(2) {
-  transition: transform 0.8s ease 0.4s;
+  transition: transform 0.8s ease 0.2s;
 }
 .locations__item._active:nth-child(3) {
-  transition: transform 0.8s ease 0.6s;
+  transition: transform 0.8s ease 0.3s;
 }
 .locations__item._active:nth-child(4) {
-  transition: transform 0.8s ease 0.8s;
+  transition: transform 0.8s ease 0.4s;
 }
 .locations__item._active:nth-child(5) {
-  transition: transform 0.8s ease 1s;
+  transition: transform 0.8s ease 0.5s;
 }
 .locations__item._active:nth-child(6) {
-  transition: transform 0.8s ease 1.2s;
+  transition: transform 0.8s ease 0.6s;
 }
 
 .item__link span {
