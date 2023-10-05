@@ -97,8 +97,8 @@ h6 {
 @font-face {
   font-family: OpenSans;
   font-display: swap;
-  src: url("../fonts/OpenSans-Medium.woff2") format("woff2"), url("../fonts/OpenSans-Medium.woff") format("woff");
-  font-weight: 500;
+  src: url("../fonts/OpenSans-Light.woff2") format("woff2"), url("../fonts/OpenSans-Light.woff") format("woff");
+  font-weight: 300;
   font-style: normal;
 }
 @font-face {
@@ -111,15 +111,50 @@ h6 {
 @font-face {
   font-family: OpenSans;
   font-display: swap;
-  src: url("../fonts/OpenSans-Regular.woff2") format("woff2"), url("../fonts/OpenSans-Regular.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/OpenSans-Medium.woff2") format("woff2"), url("../fonts/OpenSans-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: SofiaSans;
+  font-display: swap;
+  src: url("../fonts/SofiaSans-Bold.woff2") format("woff2"), url("../fonts/SofiaSans-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: SofiaSans;
+  font-display: swap;
+  src: url("../fonts/SofiaSans-Black.woff2") format("woff2"), url("../fonts/SofiaSans-Black.woff") format("woff");
+  font-weight: 900;
   font-style: normal;
 }
 @font-face {
   font-family: OpenSans;
   font-display: swap;
-  src: url("../fonts/OpenSans-Light.woff2") format("woff2"), url("../fonts/OpenSans-Light.woff") format("woff");
-  font-weight: 300;
+  src: url("../fonts/OpenSans-Regular.woff2") format("woff2"), url("../fonts/OpenSans-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: SofiaSans;
+  font-display: swap;
+  src: url("../fonts/SofiaSans-Medium.woff2") format("woff2"), url("../fonts/SofiaSans-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: SofiaSans;
+  font-display: swap;
+  src: url("../fonts/SofiaSans-ExtraBold.woff2") format("woff2"), url("../fonts/SofiaSans-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: SofiaSans;
+  font-display: swap;
+  src: url("../fonts/SofiaSans-Regular.woff2") format("woff2"), url("../fonts/SofiaSans-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 /**
@@ -1015,13 +1050,19 @@ swiper-container .swiper-notification {
     top: 0;
     left: 0;
     overflow: auto;
-    background: linear-gradient(90deg, rgb(80, 115, 155) 0%, rgb(80, 115, 155) 40%, rgba(80, 115, 155, 0.65) 70%, rgba(80, 115, 155, 0) 100%);
+    background: linear-gradient(90deg, rgb(80, 115, 155) 67%, rgba(80, 115, 155, 0.9) 77%, rgba(80, 115, 155, 0.6) 87%, rgba(80, 115, 155, 0.2) 97%, rgba(80, 115, 155, 0) 100%);
     z-index: 11;
     transform: translate3d(-100%, 0px, 0px);
+    -webkit-transform: translate3d(-100%, 0px, 0px);
+    -ms-transform: translate3d(-100%, 0px, 0px);
+    -o-transform: translate3d(-100%, 0px, 0px);
     transition: all 0.3s ease 0s;
   }
   .menu__body.active {
     transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -ms-transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate3d(0px, 0px, 0px);
   }
   .menu__list {
     flex: 1 1 auto;
@@ -1034,10 +1075,13 @@ swiper-container .swiper-notification {
   .menu__list li {
     display: block;
     white-space: nowrap;
-    margin: 0px 0px 30px 0px;
+    margin: 0px 0px 50px 0px;
   }
   .menu__list li:last-child {
     margin: 0px 0px 0px 0px;
+  }
+  .menu__link {
+    font-size: 24px;
   }
 }
 
@@ -1190,13 +1234,17 @@ swiper-container .swiper-notification {
 }
 .aboutus__body {
   display: block;
-  margin: -120px 0px 0px 0px;
+  margin-top: calc(
+			-250px + 100 * ((100vw - 320px) / 1280)
+		);
 }
 .aboutus__text {
   font-family: "Open Sans", sans-serif, sans-serif;
   letter-spacing: 0.3px;
   color: #fff;
-  font-size: 18px;
+  font-size: calc(
+			16px + 6 * ((100vw - 320px) / 1280)
+		);
   line-height: 180%;
   opacity: 0;
   -moz-transform: scale(0);
@@ -1236,7 +1284,10 @@ swiper-container .swiper-notification {
 }
 .locations__body {
   display: grid;
-  padding: 30px 15px 30px 15px;
+  margin-top: calc(
+			-65px + 20 * ((100vw - 320px) / 1280)
+		);
+  padding: 0px 15px 30px 15px;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
   grid-column-gap: 20px;
@@ -1316,7 +1367,8 @@ swiper-container .swiper-notification {
   left: 0;
   z-index: 2;
   color: #ffffff;
-  font-family: "Open Sans", sans-serif, sans-serif;
+  font-family: "SofiaSans", sans-serif, sans-serif;
+  font-weight: 700;
   font-size: 32px;
 }
 .item__link :hover {
@@ -1362,12 +1414,9 @@ swiper-container .swiper-notification {
   }
 }
 .routes {
-  margin: 130px 0px 0px 0px;
-}
-@media (max-width: 767px) {
-  .routes {
-    margin: 80px 0px 0px 0px;
-  }
+  margin-top: calc(
+			-70px + 50 * ((100vw - 320px) / 1280)
+		);
 }
 .routes__body {
   overflow: hidden;
@@ -1389,12 +1438,14 @@ swiper-container .swiper-notification {
   -moz-transition: all 1.5s ease 0s;
   -ms-transition: all 1.5s ease 0s;
   -o-transition: all 1.5s ease 0s;
+  opacity: 0;
 }
 .routes__item._active {
   transform: translate3d(0, 0px, 0);
   -webkit-transform: translate3d(0, 0px, 0);
   -ms-transform: translate3d(0, 0px, 0);
   -o-transform: translate3d(0, 0px, 0);
+  opacity: 1;
 }
 @media (max-width: 767px) {
   .routes__item {
@@ -1544,7 +1595,7 @@ body {
 .container {
   max-width: 1170px;
   margin: 0px auto;
-  padding: 0px 15px;
+  padding: 0rem 0.9375rem;
 }
 
 .page {
@@ -1599,7 +1650,7 @@ body {
 
 .title {
   display: flex;
-  max-width: 750px;
+  max-width: 46.875rem;
   position: absolute;
   padding: 0px 10px 0px 10px;
   top: 80px;
@@ -1627,11 +1678,11 @@ body {
 }
 
 .main__title {
-  font-family: "Open Sans", sans-serif, sans-serif;
+  font-family: "SofiaSans", sans-serif, sans-serif;
   font-size: calc(
 			40px + 20 * ((100vw - 320px) / 1280)
 		);
-  font-weight: 500;
+  font-weight: 800;
   color: #ffffff;
   text-shadow: 1px 1px 2px rgb(55, 54, 54), 0 0 1em rgb(80, 115, 155), 0 0 0.2em rgb(80, 115, 155);
 }
@@ -1660,7 +1711,9 @@ body {
 .travel {
   display: flex;
   flex: 0 1 100%;
-  margin-top: 30px;
+  margin-top: calc(
+			-70px + 20 * ((100vw - 320px) / 1280)
+		);
 }
 .travel__row {
   max-width: 1140px;
@@ -1785,6 +1838,8 @@ body {
   padding: 0px 0px 75% 0px;
   overflow: hidden;
   position: relative;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
 }
 .travel__image img {
   min-width: 100%;
@@ -1874,9 +1929,14 @@ body {
 }
 
 .equipment__body, .tips__body {
+  position: relative;
+  z-index: 5;
+  margin-top: calc(
+			-90px + 60 * ((100vw - 320px) / 1280)
+		);
   color: #dff3fd;
 }
-.equipment__body h3, .equipment__body p, .tips__body h3, .tips__body p {
+.equipment__body p, .tips__body p {
   margin: 0px 0px 20px 0px;
   line-height: 140%;
   font-size: calc(
@@ -1884,9 +1944,26 @@ body {
 		);
   display: block;
   padding: 10px;
-  font-family: "Open Sans", sans-serif, sans-serif;
+  font-family: "SofiaSans", sans-serif, sans-serif;
   letter-spacing: 0.3px;
-  font-weight: 300;
+  font-weight: 700;
+  transition: all 0.8s ease 0s;
+  -webkit-transition: all 0.8s ease 0s;
+  -moz-transition: all 0.8s ease 0s;
+  -ms-transition: all 0.8s ease 0s;
+  -o-transition: all 0.8s ease 0s;
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -webkit-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+}
+.equipment__body p._active, .tips__body p._active {
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
 }
 .equipment__list, .tips__list {
   margin: 0px 0px 30px 0px;
